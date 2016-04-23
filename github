@@ -1,0 +1,507 @@
+ideaplunge@developer:~/Desktop/quicksort$  git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+ideaplunge@developer:~/Desktop/quicksort$ git remote add origin https://github.com/Ashamandya/quicksort.git
+ideaplunge@developer:~/Desktop/quicksort$ git remote add origin https://github.com/Ashamandya/quicksort.git
+fatal: remote origin already exists.
+ideaplunge@developer:~/Desktop/quicksort$ git push -u origin master
+Username for 'https://github.com': ashamandya
+Password for 'https://ashamandya@github.com': 
+Counting objects: 14, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 2.61 KiB | 0 bytes/s, done.
+Total 14 (delta 4), reused 0 (delta 0)
+To https://github.com/Ashamandya/quicksort.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+ideaplunge@developer:~/Desktop/quicksort$ git log --oneline
+54ff4c3 add comm
+edd514c changes to main.cpp
+c2ec530 changes to main.cpp
+cbfb991 This is the first commit.
+ideaplunge@developer:~/Desktop/quicksort$ touch works.tmp
+ideaplunge@developer:~/Desktop/quicksort$ git commit
+Aborting commit due to empty commit message.
+ideaplunge@developer:~/Desktop/quicksort$ git commit
+Use "fg" to return to nano.
+
+[9]+  Stopped                 git commit
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	renamed:    comm -> command
+	new file:   example.cpp
+	renamed:    main.cpp -> myfile.cpp
+	modified:   quicksort.cpp
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   quicksort.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	example.cpp~
+	works.tmp
+
+ideaplunge@developer:~/Desktop/quicksort$ git add works.tmp 
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	renamed:    comm -> command
+	new file:   example.cpp
+	renamed:    main.cpp -> myfile.cpp
+	modified:   quicksort.cpp
+	new file:   works.tmp
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   quicksort.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	example.cpp~
+
+ideaplunge@developer:~/Desktop/quicksort$ git commit
+Use "fg" to return to nano.
+
+[10]+  Stopped                 git commit
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	renamed:    comm -> command
+	new file:   example.cpp
+	renamed:    main.cpp -> myfile.cpp
+	modified:   quicksort.cpp
+	new file:   works.tmp
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   quicksort.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	example.cpp~
+
+ideaplunge@developer:~/Desktop/quicksort$ git commit
+Use "fg" to return to nano.
+
+[11]+  Stopped                 git commit
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	renamed:    comm -> command
+	new file:   example.cpp
+	renamed:    main.cpp -> myfile.cpp
+	modified:   quicksort.cpp
+	new file:   works.tmp
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   quicksort.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	example.cpp~
+	main.cpp
+
+ideaplunge@developer:~/Desktop/quicksort$ git add main.cpp
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	renamed:    comm -> command
+	new file:   example.cpp
+	modified:   main.cpp
+	new file:   myfile.cpp
+	modified:   quicksort.cpp
+	new file:   works.tmp
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   quicksort.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	example.cpp~
+
+ideaplunge@developer:~/Desktop/quicksort$ git commit
+Use "fg" to return to nano.
+
+[12]+  Stopped                 git commit
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	renamed:    comm -> command
+	new file:   example.cpp
+	modified:   main.cpp
+	new file:   myfile.cpp
+	modified:   quicksort.cpp
+	new file:   works.tmp
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   main.cpp
+	modified:   main.cpp~
+	modified:   quicksort.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	example.cpp~
+
+ideaplunge@developer:~/Desktop/quicksort$ git fetch origin master
+
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Ashamandya/quicksort
+ * branch            master     -> FETCH_HEAD
+   54ff4c3..5fcfb87  master     -> origin/master
+ideaplunge@developer:~/Desktop/quicksort$ 
+ideaplunge@developer:~/Desktop/quicksort$ git log # no changes to working tree
+commit 54ff4c37412ebad8aa7c9d3c623305332b429dc3
+Author: asha <asha@ideaplunge.com>
+Date:   Sat Apr 23 11:42:04 2016 +0530
+
+    add comm
+
+commit edd514ce4a3166dbf833808bc54328daa6700a62
+Author: asha <asha@ideaplunge.com>
+Date:   Sat Apr 23 11:27:54 2016 +0530
+
+    changes to main.cpp
+
+commit c2ec53018b872f6e96a2b5e88b708dc1ae4200a5
+Author: asha <asha@ideaplunge.com>
+Date:   Sat Apr 23 10:54:02 2016 +0530
+
+    changes to main.cpp
+
+commit cbfb991c08233ac387fc2378c0b05fe9ce6e6dba
+Author: asha <asha@ideaplunge.com>
+Date:   Sat Apr 23 10:43:23 2016 +0530
+
+    This is the first commit.
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	renamed:    comm -> command
+	new file:   example.cpp
+	modified:   main.cpp
+	new file:   myfile.cpp
+	modified:   quicksort.cpp
+	new file:   works.tmp
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   main.cpp
+	modified:   main.cpp~
+	modified:   quicksort.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	example.cpp~
+
+ideaplunge@developer:~/Desktop/quicksort$ git diff master origin/master
+diff --git a/main.cpp b/main.cpp
+index 17f0e79..7229e7b 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
+        std::for_each(v.begin(), v.end(), print<std::string>);
+        std::cout<<'\n';
+ 
+-       int a[]={3,8,0,6,7,4,2,1,9,3,1,8,3,9,2,0,9};
++       int a[]={3,1,8,3,9,2,0,9};^M
+        int *a_end=a+sizeof a/sizeof(int);
+ 
+        std::cout<<"a before qsort: ";
+ideaplunge@developer:~/Desktop/quicksort$ git merge origin/master
+Updating 54ff4c3..5fcfb87
+error: Your local changes to the following files would be overwritten by merge:
+	main.cpp
+Please, commit your changes or stash them before you can merge.
+Aborting
+ideaplunge@developer:~/Desktop/quicksort$ git commit
+Use "fg" to return to nano.
+
+[13]+  Stopped                 git commit
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	renamed:    comm -> command
+	new file:   example.cpp
+	modified:   main.cpp
+	new file:   myfile.cpp
+	modified:   quicksort.cpp
+	new file:   works.tmp
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   main.cpp
+	modified:   main.cpp~
+	modified:   quicksort.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	example.cpp~
+
+ideaplunge@developer:~/Desktop/quicksort$ git merge origin/master
+Updating 54ff4c3..5fcfb87
+error: Your local changes to the following files would be overwritten by merge:
+	main.cpp
+Please, commit your changes or stash them before you can merge.
+Aborting
+ideaplunge@developer:~/Desktop/quicksort$ git commit
+Use "fg" to return to nano.
+
+[14]+  Stopped                 git commit
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	renamed:    comm -> command
+	new file:   example.cpp
+	modified:   main.cpp
+	new file:   myfile.cpp
+	modified:   quicksort.cpp
+	new file:   works.tmp
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   main.cpp
+	modified:   main.cpp~
+	modified:   quicksort.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	example.cpp~
+
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	renamed:    comm -> command
+	new file:   example.cpp
+	modified:   main.cpp
+	new file:   myfile.cpp
+	modified:   quicksort.cpp
+	new file:   works.tmp
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   main.cpp
+	modified:   main.cpp~
+	modified:   quicksort.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+
+ideaplunge@developer:~/Desktop/quicksort$ git add .
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   .gitignore
+	renamed:    comm -> command
+	new file:   example.cpp
+	modified:   main.cpp
+	modified:   main.cpp~
+	new file:   myfile.cpp
+	new file:   works.tmp
+
+ideaplunge@developer:~/Desktop/quicksort$ git diff main.cpp
+ideaplunge@developer:~/Desktop/quicksort$ git diff --staged main.cpp
+diff --git a/main.cpp b/main.cpp
+index 17f0e79..965df6a 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -25,10 +25,7 @@ int main(int argc, char* argv[])
+        v[8]="Amsterdam";
+        v[9]="Dublin";
+ 
+-       std::cout<<"v before qsort: ";
+-       std::for_each(v.begin(), v.end(), print<std::string>);
+-       std::cout<<'\n';
+-
++       ^M
+        quick_sort(v.begin(), v.end());
+ 
+        std::cout<<"v after qsort: ";
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   .gitignore
+	renamed:    comm -> command
+	new file:   example.cpp
+	modified:   main.cpp
+	modified:   main.cpp~
+	new file:   myfile.cpp
+	new file:   works.tmp
+
+ideaplunge@developer:~/Desktop/quicksort$ git commit
+[master 206ae67] //local commit
+ 7 files changed, 74 insertions(+), 7 deletions(-)
+ create mode 100644 .gitignore
+ rename comm => command (100%)
+ create mode 100644 example.cpp
+ create mode 100644 myfile.cpp
+ create mode 100644 works.tmp
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commit each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working directory clean
+ideaplunge@developer:~/Desktop/quicksort$ git diff
+ideaplunge@developer:~/Desktop/quicksort$ git diff master origin/master main.cppdiff --git a/main.cpp b/main.cpp
+index 965df6a..7229e7b 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -25,14 +25,17 @@ int main(int argc, char* argv[])
+        v[8]="Amsterdam";
+        v[9]="Dublin";
+ 
+-       
++       std::cout<<"v before qsort: ";^M
++       std::for_each(v.begin(), v.end(), print<std::string>);^M
++       std::cout<<'\n';^M
++^M
+        quick_sort(v.begin(), v.end());
+ 
+        std::cout<<"v after qsort: ";
+        std::for_each(v.begin(), v.end(), print<std::string>);
+        std::cout<<'\n';
+ 
+-       int a[]={3,8,0,6,7,4,2,1,9,3,1,8,3,9,2,0,9};
++       int a[]={3,1,8,3,9,2,0,9};^M
+        int *a_end=a+sizeof a/sizeof(int);
+ 
+
+[15]+  Stopped                 git diff master origin/master main.cpp
+ideaplunge@developer:~/Desktop/quicksort$ git merge origin/master
+Auto-merging main.cpp
+Merge made by the 'recursive' strategy.
+ main.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ideaplunge@developer:~/Desktop/quicksort$ git remote add origin https://github.com/Ashamandya/quicksort.git
+fatal: remote origin already exists.
+ideaplunge@developer:~/Desktop/quicksort$ git push -u origin master
+Username for 'https://github.com': ashamandya
+Password for 'https://ashamandya@github.com': 
+Counting objects: 15, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (10/10), 988 bytes | 0 bytes/s, done.
+Total 10 (delta 4), reused 0 (delta 0)
+To https://github.com/Ashamandya/quicksort.git
+   5fcfb87..4e589fd  master -> master
+Branch master set up to track remote branch master from origin.
+ideaplunge@developer:~/Desktop/quicksort$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working directory clean
+ideaplunge@developer:~/Desktop/quicksort$ git tag -a v1.1.2 -m"Release for demo."
+ideaplunge@developer:~/Desktop/quicksort$ git push origin --tags
+Username for 'https://github.com': ashamandya
+Password for 'https://ashamandya@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1), 164 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Ashamandya/quicksort.git
+ * [new tag]         v1.1.2 -> v1.1.2
+ideaplunge@developer:~/Desktop/quicksort$ A
+

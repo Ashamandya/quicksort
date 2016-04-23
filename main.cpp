@@ -26,15 +26,15 @@ int main(int argc, char* argv[])
 	v[7]="Tallinn";
 	v[8]="Amsterdam";
 	v[9]="Dublin";
-
+//changing to asha repo
 	
 	quick_sort(v.begin(), v.end());
 
 	std::cout<<"v after qsort: ";
 	std::for_each(v.begin(), v.end(), print<std::string>);
 	std::cout<<'\n';
-
-	int a[]={3,1,8,3,9,2,0,9};
+int b[]={3,8,0,6,7,4,2,1,9,3,1,8,3,9,2,0,9};
+	int a[]={3,8,0,6,7,4,2,1,9,3,1,8,3,9,2,0,9};
 	int *a_end=a+sizeof a/sizeof(int);
 
 	std::cout<<"a before qsort: ";
