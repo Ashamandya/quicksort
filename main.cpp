@@ -25,8 +25,7 @@ int main(int argc, char* argv[])
 	v[8]="Amsterdam";
 	v[9]="Dublin";
 //changing to asha repo
-//change1
-	
+//branches
 	quick_sort(v.begin(), v.end());
 
 	std::cout<<"v after qsort: ";
