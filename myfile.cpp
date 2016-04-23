@@ -9,10 +9,11 @@
 
 using namespace std;
 
-#include "quicksort.h"
+#include "myfile.cpp"
 
 int main(int argc, char* argv[])
 {
+               int number=0;
 	std::vector<std::string> v(10);
 	v[0]="Paris";
         v[0]="London"
@@ -38,9 +39,6 @@ int main(int argc, char* argv[])
 	int a[]={3,8,0,6,7,4,2,1,9,3,1,8,3,9,2,0,9};
 	int *a_end=a+sizeof a/sizeof(int);
 
-	std::cout<<"a before qsort: ";
-	std::for_each(a, a_end, print<int>);
-	std::cout<<'\n';
 
 	quick_sort(a, a_end, pivot_random<int*>());
 	
