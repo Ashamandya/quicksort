@@ -25,7 +25,10 @@ int main(int argc, char* argv[])
 	v[8]="Amsterdam";
 	v[9]="Dublin";
 
-	
+	std::cout<<"v before qsort: ";
+	std::for_each(v.begin(), v.end(), print<std::string>);
+	std::cout<<'\n';
+
 	quick_sort(v.begin(), v.end());
 
 	std::cout<<"v after qsort: ";
